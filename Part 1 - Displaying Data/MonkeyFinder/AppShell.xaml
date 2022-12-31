@@ -25,7 +25,6 @@
     </Shell.Resources>
 
 
-
     <ShellContent
         Shell.NavBarIsVisible="true"
         Title="Monkeys"
