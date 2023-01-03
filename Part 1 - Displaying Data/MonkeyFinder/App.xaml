@@ -63,6 +63,7 @@
                 <Setter Property="Background" Value="{StaticResource LightBackground}"/>
                 <Setter Property="CornerRadius" Value="10"/>
                 <Setter Property="IsClippedToBounds" Value="True"/>
+                <Setter Property="Margin" Value="10"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

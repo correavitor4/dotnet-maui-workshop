@@ -20,16 +20,21 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Monkey">
                     <Grid>
-                        <Frame HeightRequest="125">
+                        <Frame HeightRequest="125"
+                               BorderColor="Black"
+                               Style="{StaticResource CardView}">
                             <Grid ColumnDefinitions="125,*">
                                 <Image Source="{Binding Image}"
-                                       Aspect="AspectFill"
-                                       HeightRequest="125"
-                                       WidthRequest="125"/>
-                                <VerticalStackLayout Grid.Column="1" 
+                                       Margin="10"
+                                       Aspect="AspectFill"/>
+                                <VerticalStackLayout Grid.Column="1"
+                                                     Padding="10"
                                                      VerticalOptions="Center"
-                                                     HorizontalOptions="Center">
-                                    <Label Text="{Binding Name}"/>
+                                                     HorizontalOptions="Start">
+                                    <Label Text="{Binding Name}"
+                                           Style="{StaticResource LargeLabel}"/>
+                                    <Label Text="{Binding Location}"
+                                           Style="{StaticResource MediumLabel}"/>
                                 </VerticalStackLayout>
                             </Grid>
                         </Frame>
@@ -39,6 +44,7 @@
         </CollectionView>
 
         <Button Text="Get Monkeys"
+                Style="{StaticResource ButtonOutline}"
                 Command="{Binding GetMonkeysCommand}"
                 IsEnabled="{Binding IsNotBusy}"
                 Grid.Row="1"
