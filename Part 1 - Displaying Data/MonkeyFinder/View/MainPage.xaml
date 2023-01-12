@@ -15,14 +15,18 @@
 
         <CollectionView
             Grid.ColumnSpan="2"
-                        ItemsSource="{Binding Monkeys}"
-                        SelectionMode="None">
+            ItemsSource="{Binding Monkeys}"
+            SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Monkey">
                     <Grid>
                         <Frame HeightRequest="125"
                                BorderColor="Black"
                                Style="{StaticResource CardView}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer CommandParameter="{Binding .}"
+                                                      Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MonkeysViewModel}}, Path=GoToDetailsCommand}"/>
+                            </Frame.GestureRecognizers>
                             <Grid ColumnDefinitions="125,*">
                                 <Image Source="{Binding Image}"
                                        Margin="10"
