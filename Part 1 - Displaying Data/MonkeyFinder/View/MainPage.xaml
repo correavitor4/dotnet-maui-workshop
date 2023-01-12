@@ -53,6 +53,13 @@
                 IsEnabled="{Binding IsNotBusy}"
                 Grid.Row="1"
                 Margin="10"/>
+        <Button Text="Find Closest"
+                Style="{StaticResource ButtonOutline}"
+                Command="{Binding GetClosestMonkeyCommand}"
+                IsEnabled="{Binding IsNotBusy}"
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="10"/>
 
         <ActivityIndicator IsVisible="{Binding IsBusy}"
                            IsRunning="{Binding IsBusy}"
