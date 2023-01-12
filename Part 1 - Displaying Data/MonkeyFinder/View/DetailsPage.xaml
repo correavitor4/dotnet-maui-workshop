@@ -34,6 +34,12 @@
                 </Frame>
             </Grid>
 
+            <Button Text="Show on Map"
+                    Command="{Binding OpenMapCommand}"
+                    WidthRequest="200"
+                    Margin="8"
+                    Style="{StaticResource ButtonOutline}"/>
+
             <VerticalStackLayout Padding="10" Spacing="10">
                 <Label Text="{Binding Monkey.Details}"
                        Style="{StaticResource MediumLabel}"/>
